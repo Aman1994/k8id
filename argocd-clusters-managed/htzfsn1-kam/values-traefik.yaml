@@ -1,4 +1,6 @@
 traefik:
+  deployment:
+    kind: DaemonSet
   ports:
     websecure:
       hostPort: 443
