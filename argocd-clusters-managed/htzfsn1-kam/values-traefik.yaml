@@ -1,0 +1,10 @@
+traefik:
+  ports:
+    websecure:
+      hostPort: 443
+    web:
+      hostPort: 80
+  service:
+    type: NodePort
+    externalIPs:
+      - 95.217.100.51
