@@ -19,8 +19,5 @@ spec:
       - values.yaml
       - ../../argocd-clusters-managed/ashish-microk8s/values-traefik.yaml
   syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
     syncOptions:
     - CreateNamespace=true

@@ -1,10 +1,20 @@
 traefik:
   ports:
-    nodeports:
-      http: 80
-      http: 9443
+    traefik:
+      hostPort: 9000
+      protocol: TCP
+    websecure:
+      hostPort: 443
+      expose: true
+      exposedPort: 443
+      protocol: TCP
+    web:
+      hostPort: 80
+      expose: true
+      exposedPort: 80
+      protocol: TCP
   service:
     enabled: true
-    type: NodePort
+    type: LoadBalancer
     externalIPs:
       - 192.168.1.190
