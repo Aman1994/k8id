@@ -8,4 +8,3 @@ traefik:
     type: NodePort
     externalIPs:
       - 95.217.100.51
-
