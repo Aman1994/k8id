@@ -52,7 +52,7 @@ argo-cd:
             name: argo-cd-microk8s-gitlab-ssh
             key: ssh-privatekey
         - type: git
-          url: ssh://git@gitlab.enableit.dk:2223/kubernetes/k8s-secrets/enableit.git
+          url: ssh://git@gitlab.enableit.dk:2223/kubernetes/k8s-secrets/ashish.git
           sshPrivateKeySecret:
             name: argo-cd-microk8s-gitlab-ssh
             key: ssh-privatekey
