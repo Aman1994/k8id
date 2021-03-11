@@ -5,7 +5,6 @@ traefik:
     web:
       hostPort: 80
   service:
-    enabled: true
     type: NodePort
     externalIPs:
       - 95.217.100.51
