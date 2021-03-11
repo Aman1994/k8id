@@ -13,7 +13,7 @@ spec:
   source:
     path: argocd-clusters-managed/ashish-microk8s/
     repoURL: ssh://git@gitlab.enableit.dk:2223/kubernetes/argocd-apps.git
-    targetRevision: k8s-ashish
+    targetRevision: HEAD
   syncPolicy:
     automated:
       prune: true
