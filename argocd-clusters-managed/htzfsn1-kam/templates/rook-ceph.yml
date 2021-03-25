@@ -11,7 +11,7 @@ spec:
     namespace: rook-ceph
   project: default
   source:
-    path: argocd-helm-charts/rook
+    path: argocd-helm-charts/rook-ceph
     repoURL: ssh://git@gitlab.enableit.dk:2223/kubernetes/argocd-apps.git
     targetRevision: rook
     helm:
