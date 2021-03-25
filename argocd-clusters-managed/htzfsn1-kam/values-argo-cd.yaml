@@ -46,6 +46,9 @@ argo-cd:
         - type: helm
           name: prometheus-community
           url: https://prometheus-community.github.io/helm-charts
+        - type: helm
+          name: rook-ceph
+          url: https://charts.rook.io/release
         - type: git
           url: ssh://git@gitlab.enableit.dk:2223/kubernetes/argocd-apps.git
           sshPrivateKeySecret:
