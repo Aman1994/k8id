@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: k8s-configs-ops
+  name: k8s-config-kam
   namespace: argocd
 spec:
   destination:
