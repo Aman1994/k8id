@@ -5,6 +5,7 @@ kube-prometheus-stack:
         volumeClaimTemplate:
           spec:
             storageClassName: rook-ceph-block
+            accessModes: ["ReadWriteOnce"]
             resources:
               requests:
                 storage: 10Gi
