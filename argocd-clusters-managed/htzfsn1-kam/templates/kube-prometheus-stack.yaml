@@ -13,7 +13,7 @@ spec:
   source:
     path: argocd-clusters-managed/htzfsn1-kam/
     repoURL: ssh://git@gitlab.enableit.dk:2223/kubernetes/argocd-apps.git
-    targetRevision: HEAD
+    targetRevision: prom
     helm:
       valueFiles:
       - values.yaml
