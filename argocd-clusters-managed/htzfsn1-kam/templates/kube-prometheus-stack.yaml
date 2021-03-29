@@ -11,7 +11,7 @@ spec:
     namespace: monitoring
   project: default
   source:
-    path: argocd-clusters-managed/htzfsn1-kam/
+    path: argocd-helm-charts/kube-prometheus-stack
     repoURL: ssh://git@gitlab.enableit.dk:2223/kubernetes/argocd-apps.git
     targetRevision: prom
     helm:
