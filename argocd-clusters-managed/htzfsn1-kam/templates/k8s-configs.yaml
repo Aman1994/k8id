@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: k8s-config-kam
+  namespace: argocd
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: kube-system
+  project: default
+  source:
+    path: argocd-k8sconfig/htzfsn1-kam
+    repoURL: ssh://git@gitlab.enableit.dk:2223/kubernetes/argocd-apps.git
+    targetRevision: rook
+    directory:
+      recurse: true
