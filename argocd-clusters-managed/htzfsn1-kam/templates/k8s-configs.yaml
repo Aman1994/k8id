@@ -11,6 +11,6 @@ spec:
   source:
     path: argocd-k8sconfig/htzfsn1-kam
     repoURL: ssh://git@gitlab.enableit.dk:2223/kubernetes/argocd-apps.git
-    targetRevision: rook
+    targetRevision: HEAD
     directory:
       recurse: true
