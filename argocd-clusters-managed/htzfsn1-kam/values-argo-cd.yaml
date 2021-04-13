@@ -3,6 +3,8 @@ argo-cd:
   dex:
     enabled: false
   configs:
+    secret:
+      createSecret: false #managed by sealed-secrets now
     knownHosts:
       data:
         ssh_known_hosts: |
