@@ -61,13 +61,13 @@ argo-cd:
           sshPrivateKeySecret:
             name: argo-cd-enableit-gitlab-ssh
             key: ssh-privatekey
-  ingress:
-    enabled: true
-    annotations:
-      cert-manager.io/cluster-issuer: letsencrypt-cluster-issuer
-    hosts:
-    - argocd.kam.obmondo.com
-    tls:
-    - secretName: argocd-ssl
+    ingress:
+      enabled: true
+      annotations:
+        cert-manager.io/cluster-issuer: letsencrypt-cluster-issuer
       hosts:
       - argocd.kam.obmondo.com
+      tls:
+      - secretName: argocd-ssl
+        hosts:
+        - argocd.kam.obmondo.com
