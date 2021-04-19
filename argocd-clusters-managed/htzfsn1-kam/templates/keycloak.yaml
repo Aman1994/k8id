@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: keycloak
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: keycloak
+    server: 'https://kubernetes.default.svc'
+  project: default
+  source:
+    path: argocd-helm-charts/keycloak
+    repoURL: 'ssh://git@gitlab.enableit.dk:2223/kubernetes/argocd-apps.git'
+    targetRevision: HEAD
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
