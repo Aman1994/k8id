@@ -51,6 +51,9 @@ argo-cd:
         - type: helm
           name: rook-ceph
           url: https://charts.rook.io/release
+        - type: helm
+          name: keycloak
+          url: https://codecentric.github.io/helm-charts
         - type: git
           url: ssh://git@gitlab.enableit.dk:2223/kubernetes/argocd-apps.git
           sshPrivateKeySecret:
