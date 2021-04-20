@@ -1,0 +1,4 @@
+issuer:
+  enabled: true
+  issuerEmail: klavs@obmondo.com #this is required
+  production: true
