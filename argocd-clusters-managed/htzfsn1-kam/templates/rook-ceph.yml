@@ -17,6 +17,7 @@ spec:
     helm:
       valueFiles:
       - values.yaml
+      - ../../argocd-clusters-managed/htzfsn1-kam/values-rook-ceph.yaml
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
