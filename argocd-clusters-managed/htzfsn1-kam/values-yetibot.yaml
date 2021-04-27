@@ -17,11 +17,11 @@ yetibot:
       YB_URL: "yetibot.kam.obmondo.com"
 
   ingress:
-    enabled: true
+    enabled: false
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt
     hosts:
-    - yetibot.kam.obmondo.com
+    - "yetibot.kam.obmondo.com"
     tls:
     - secretName: yetibot.kam.obmondo.com-cert
       hosts:
