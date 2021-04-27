@@ -8,7 +8,7 @@ metadata:
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: system
+    namespace: yetibot
   project: default
   source:
     path: argocd-helm-charts/yetibot
@@ -20,4 +20,5 @@ spec:
       - ../../argocd-clusters-managed/htzfsn1-kam/values-yetibot.yaml
   syncPolicy:
     syncOptions:
+    - ApplyOutOfSyncOnly=true
     - CreateNamespace=true
