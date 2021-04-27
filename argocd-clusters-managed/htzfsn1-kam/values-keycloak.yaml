@@ -1,0 +1,12 @@
+---
+keycloak:
+  ingress:
+    enabled: true
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt
+    hosts:
+    - keycloak.kam.obmondo.com
+    tls:
+    - secretName: keycloak-ssl
+      hosts:
+      - keycloak.kam.obmondo.com
