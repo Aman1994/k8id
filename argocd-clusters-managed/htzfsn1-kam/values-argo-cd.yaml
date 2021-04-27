@@ -54,6 +54,9 @@ argo-cd:
         - type: helm
           name: keycloak
           url: https://codecentric.github.io/helm-charts
+        - type: helm
+          name: yetibot
+          url: https://yetibot.com/yetibot-helm/
         - type: git
           url: ssh://git@gitlab.enableit.dk:2223/kubernetes/argocd-apps.git
           sshPrivateKeySecret:
