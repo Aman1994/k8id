@@ -9,7 +9,7 @@ keycloak:
     rules:
     - hosts: keycloak.kam.obmondo.com
     console:
-    - enabled: true
+      enabled: true
       rules:
         - hosts: keycloak.kam.obmondo.com
     tls:
