@@ -20,4 +20,5 @@ spec:
       - ../../argocd-clusters-managed/htzfsn1-kam/values-rook-ceph.yaml
   syncPolicy:
     syncOptions:
+    - ApplyOutOfSyncOnly=true
     - CreateNamespace=true
