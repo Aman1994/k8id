@@ -7,11 +7,11 @@ keycloak:
     hosts:
     - keycloak.kam.obmondo.com
     rules:
-    - hosts: keycloak.kam.obmondo.com
+    - host: keycloak.kam.obmondo.com
     console:
       enabled: true
       rules:
-        - hosts: keycloak.kam.obmondo.com
+        - host: keycloak.kam.obmondo.com
     tls:
     - secretName: keycloak-ssl
       hosts:
