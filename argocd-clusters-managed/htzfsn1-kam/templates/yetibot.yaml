@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: yetibot
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: system
+  project: default
+  source:
+    path: argocd-helm-charts/yetibot
+    repoURL: ssh://git@gitlab.enableit.dk:2223/kubernetes/argocd-apps.git
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+      - values.yaml
+      - ../../argocd-clusters-managed/htzfsn1-kam/values-yetibot.yaml
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
