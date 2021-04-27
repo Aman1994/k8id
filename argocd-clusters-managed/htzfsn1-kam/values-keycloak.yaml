@@ -4,8 +4,6 @@ keycloak:
     enabled: true
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt
-    hosts:
-    - keycloak.kam.obmondo.com
     rules:
     - host: keycloak.kam.obmondo.com
       paths:
@@ -17,6 +15,6 @@ keycloak:
           paths:
             - /auth/admin/
     tls:
-    - secretName: argocd-ssl
+    - secretName: keycloak-ssl
       hosts:
       - keycloak.kam.obmondo.com
