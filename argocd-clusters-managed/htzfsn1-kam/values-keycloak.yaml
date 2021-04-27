@@ -17,6 +17,6 @@ keycloak:
           paths:
             - /auth/admin/
     tls:
-    - secretName: keycloak-ssl
+    - secretName: argocd-ssl
       hosts:
       - keycloak.kam.obmondo.com
