@@ -14,6 +14,10 @@ spec:
     path: argocd-helm-charts/keycloak
     repoURL: 'ssh://git@gitlab.enableit.dk:2223/kubernetes/argocd-apps.git'
     targetRevision: HEAD
+    helm:
+      valueFiles:
+      - values.yaml
+      - ../../argocd-clusters-managed/htzfsn1-kam/values-keycloak.yaml
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
