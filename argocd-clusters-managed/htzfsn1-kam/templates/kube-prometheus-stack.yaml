@@ -20,4 +20,5 @@ spec:
       - ../../argocd-clusters-managed/htzfsn1-kam/values-kube-prometheus-stack.yaml
   syncPolicy:
     syncOptions:
+    - ApplyOutOfSyncOnly=true
     - CreateNamespace=true

@@ -19,3 +19,5 @@ spec:
       - values.yaml
       - ../../argocd-clusters-managed/htzfsn1-kam/values-argo-cd.yaml
   syncPolicy:
+    - ApplyOutOfSyncOnly=true
+    - CreateNamespace=true
