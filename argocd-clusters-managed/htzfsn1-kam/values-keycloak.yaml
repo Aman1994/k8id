@@ -8,6 +8,12 @@ keycloak:
     - host: keycloak.kam.obmondo.com
       paths:
         - /
+    console:
+      enabled: true
+      rules:
+        - host: keycloak.kam.obmondo.com
+          paths:
+            - /auth/admin/
     tls:
     - secretName: keycloak-ssl
       hosts:
