@@ -4,6 +4,7 @@ keycloak:
     enabled: true
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt
+      kubernetes.io/ingress.class: traefik-cert-manager
     rules:
     - host: keycloak.kam.obmondo.com
       paths:
