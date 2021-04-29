@@ -13,7 +13,7 @@ spec:
   source:
     path: argocd-helm-charts/kube-prometheus-stack
     repoURL: ssh://git@gitlab.enableit.dk:2223/kubernetes/argocd-apps.git
-    targetRevision: prom
+    targetRevision: HEAD
     helm:
       valueFiles:
       - values.yaml
