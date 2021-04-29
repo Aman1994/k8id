@@ -1,5 +1,16 @@
 ---
 keycloak:
+  extraEnv: |
+    - name: PROXY_ADDRESS_FORWARDING
+      value: 'true'
+    - name: KEYCLOAK_USER
+      value: "admin"
+    - name: KEYCLOAK_PASSWORD
+      value: "admin"
+    - name: KEYCLOAK_LOGLEVEL
+      value: DEBUG
+  args:
+    - -Dkeycloak.profile.feature.docker=enabled
   ingress:
     enabled: true
     annotations:
@@ -9,14 +20,6 @@ keycloak:
     - host: keycloak.kam.obmondo.com
       paths:
         - /
-    console:
-      enabled: true
-      annotations:
-        kubernetes.io/ingress.class: traefik-cert-manager
-      rules:
-      - host: keycloak.kam.obmondo.com
-        paths:
-          - /auth/admin/
     tls:
     - secretName: keycloak-kam-ssl
       hosts:
