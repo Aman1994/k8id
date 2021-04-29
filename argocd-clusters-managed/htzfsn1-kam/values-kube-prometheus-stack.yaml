@@ -13,6 +13,7 @@ kube-prometheus-stack:
     ingress:
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt
+        kubernetes.io/ingress.class: traefik-cert-manager
       hosts:
       - grafana.kam.obmondo.com
       tls:
