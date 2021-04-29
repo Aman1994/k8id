@@ -12,4 +12,5 @@ traefik:
       - 176.9.67.43
   additionalArguments:
     - '--providers.kubernetesingress.ingressclass=traefik-cert-manager'
+    - '--entrypoints.websecure.http.tls'
     - '--metrics.prometheus=true'
