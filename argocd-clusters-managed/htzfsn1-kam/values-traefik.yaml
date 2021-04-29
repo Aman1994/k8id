@@ -9,4 +9,7 @@ traefik:
   service:
     type: NodePort
     externalIPs:
-      - 176.9.67.43 
+      - 176.9.67.43
+  additionalArguments:
+    - "--providers.kubernetesIngress.ingressClass=traefik-cert-manager"
+    - "--metrics.prometheus"
