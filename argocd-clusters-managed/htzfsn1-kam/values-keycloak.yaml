@@ -15,6 +15,6 @@ keycloak:
           paths:
             - /auth/admin/
     tls:
-    - secretName: keycloak-ssl
+    - secretName: keycloak-kam-ssl
       hosts:
       - keycloak.kam.obmondo.com
