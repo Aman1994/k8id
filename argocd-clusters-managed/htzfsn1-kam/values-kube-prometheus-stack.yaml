@@ -9,3 +9,19 @@ kube-prometheus-stack:
             resources:
               requests:
                 storage: 10Gi
+  grafana:
+    ingress:
+      annotations:
+        cert-manager.io/cluster-issuer: letsencrypt
+      hosts:
+      - grafana.kam.obmondo.com
+      tls:
+      - secretName: kube-prometheus-grafana-tls
+        hosts:
+        - grafana.kam.obmondo.com
+  alertmanager:
+    alertmanagerSpec:
+      # Secret, containing alertmanager.yaml config MUST be named alertmanager-kube-prometheus-stack-alertmanager
+      #useExistingSecret: true
+      #secrets:
+      # - "k8s-sre.rufvpto91t-certificate"
