@@ -11,9 +11,9 @@ traefik:
     externalIPs:
       - 176.9.67.43
   additionalArguments:
-    - '--providers.kubernetesIngress.ingressClass=traefik-cert-manager'
+    - '--providers.kubernetesingress.ingressclass=traefik-cert-manager'
     - '--entrypoints.web.proxyprotocol=true'
     - '--entrypoints.web.proxyprotocol.insecure=true'
     - '--entrypoints.websecure.proxyprotocol=true'
     - '--entrypoints.websecure.proxyprotocol.insecure=true'
-    - '--metrics.prometheus'
+    - '--metrics.prometheus=true'
