@@ -2,13 +2,6 @@
 yetibot: 
   yetibot:
     env:
-      # In the context of running on Kuberenetes, we must ensure Yetibot ignores
-      # all `YETIBOT_` env vars, since by convention Kubernetes will expose a
-      # bunch of them inside the pod, unrelated to Yetibot's own config. If we
-      # don't override the env prefix, Yetibot will throw exceptions at runtime
-      # and the pod will CrashLoop.
-      YETIBOT_ENV_PREFIX: yb
-      YB_DB_URL: "jdbc:postgresql://yetibot:yetibot@yetibot-postgresql:5432/yetibot"
       YETIBOT_ADAPTERS_MYMATTERMOST_TYPE: "mattermost"
       YETIBOT_ADAPTERS_MYMATTERMOST_HOST: "chat.obmondo.com"
       # This is delivered by sealed-secrets 
