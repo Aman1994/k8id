@@ -2,11 +2,11 @@
 yetibot: 
   yetibot:
     env:
-      YETIBOT_ADAPTERS_MYMATTERMOST_TYPE: "mattermost"
-      YETIBOT_ADAPTERS_MYMATTERMOST_HOST: "chat.obmondo.com"
+      YB_ADAPTERS_MYMATTERMOST_TYPE: "mattermost"
+      YB_ADAPTERS_MYMATTERMOST_HOST: "chat.obmondo.com"
       # This is delivered by sealed-secrets 
-      #YETIBOT_ADAPTERS_MYMATTERMOST_TOKEN: ""
-      YETIBOT_ADAPTERS_MYMATTERMOST_SECURE: "true" # true by default
+      #YB_ADAPTERS_MYMATTERMOST_TOKEN: ""
+      YB_ADAPTERS_MYMATTERMOST_SECURE: "true" # true by default
       YB_URL: "yetibot.kam.obmondo.com"
 
   ingress:
