@@ -57,6 +57,9 @@ argo-cd:
         - type: helm
           name: yetibot
           url: https://yetibot.com/yetibot-helm/
+        - type: helm
+          name: gitlab
+          url: https://charts.gitlab.io
         - type: git
           url: ssh://git@gitlab.enableit.dk:2223/kubernetes/argocd-apps.git
           sshPrivateKeySecret:
