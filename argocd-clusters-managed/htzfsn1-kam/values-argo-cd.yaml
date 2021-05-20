@@ -70,6 +70,17 @@ argo-cd:
           sshPrivateKeySecret:
             name: argo-cd-enableit-gitlab-ssh
             key: ssh-privatekey
+        - name: helm-repo-cache
+          type: helm
+          url: ghcr.io/Obmondo
+          enableOci: true
+          usernameSecret:
+            key: username
+            name: repo-cache
+          passwordSecret:
+            key: password
+            name: repo-cache
+
     ingress:
       enabled: true
       annotations:
