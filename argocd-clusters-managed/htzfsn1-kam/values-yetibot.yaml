@@ -7,7 +7,7 @@ yetibot:
       # This is delivered by sealed-secrets 
       #YB_ADAPTERS_MYMATTERMOST_TOKEN: ""
       YB_ADAPTERS_MYMATTERMOST_SECURE: "true" # true by default
-      YB_URL: "yetibot.kam.obmondo.com"
+      YB_URL: "http://localhost:8080"
 
   ingress:
     enabled: false
