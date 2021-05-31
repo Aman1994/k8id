@@ -1,0 +1,6 @@
+---
+teleport-cluster:
+  clusterName: htzsb44fsn1a.enableit.dk
+  acme: true
+  acmeEmail: "info@enableit.dk"
+  chartMode: standalone
