@@ -1,6 +1,6 @@
 ---
 teleport-cluster:
-  clusterName: htzsb44fsn1a.enableit.dk
+  clusterName: teleport.obmondo.com
   acme: true
   acmeEmail: "info@enableit.dk"
   chartMode: standalone
