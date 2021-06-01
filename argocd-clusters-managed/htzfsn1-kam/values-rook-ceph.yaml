@@ -1,2 +1,4 @@
-storageclass:
-  default: true
+---
+rook-ceph:
+  storageclass:
+    default: true
