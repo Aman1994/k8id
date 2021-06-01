@@ -1,0 +1,8 @@
+---
+metallb:
+  configInline:
+    address-pools:
+      - name: fsn1float2
+        protocol: layer2
+        addresses:
+         - 178.63.30.122/32
