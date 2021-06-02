@@ -2,5 +2,5 @@
 teleport-kube-agent:
   roles: kube
   kubeClusterName: kam.obmondo.com
-  proxyAddr: teleport.example.com:443
+  proxyAddr: teleport.obmondo.com:443
   authToken: df766fa2765cda1360ab87c8fcc48cbf
