@@ -3,4 +3,5 @@ teleport-cluster:
   clusterName: teleport.obmondo.com
   acme: true
   acmeEmail: "info@enableit.dk"
-  chartMode: standalone
+  customConfig: true
+  chartMode: "custom"
