@@ -20,6 +20,34 @@ kube-prometheus-stack:
       - secretName: kube-prometheus-grafana-tls
         hosts:
         - grafana.kam.obmondo.com
+    analytics:
+      check_for_updates: false
+    env:
+      GF_SECURITY_DISABLE_INITIAL_ADMIN_CREATION: true
+    envValueFrom:
+      GF_AUTH_GENERIC_OAUTH_CLIENT_SECRET:
+        secretKeyRef:
+            name: kube-prometheus-stack-grafana
+            key: grafana-keycloak-secret
+    grafana.ini:
+      auth:
+        disable_login_form: true
+        oauth_auto_login: true
+        disable_signout_menu: false
+        signout_redirect_url: https://keycloak.kam.obmondo.com/auth/realms/devops/protocol/openid-connect/logout?redirect_uri=https://grafana.kam.obmondo.com
+      server:
+        root_url: https://grafana.kam.obmondo.com
+      auth.generic_oauth:
+        enabled: true
+        allow_sign_up: true
+        scopes: openid profile email
+        name: Keycloak
+        auth_url: https://keycloak.kam.obmondo.com/auth/realms/devops/protocol/openid-connect/auth
+        token_url: https://keycloak.kam.obmondo.com/auth/realms/devops/protocol/openid-connect/token
+        api_url: https://keycloak.kam.obmondo.com/auth/realms/devops/protocol/openid-connect/userinfo
+        client_id: grafana
+        client_secret: 2a13b143-6288-4abd-ac88-6f2e00a9f1d7
+        role_attribute_path: contains(not_null(roles[*],''), 'Admin') && 'Admin' || contains(not_null(roles[*],''), 'Editor') && 'Editor' || contains(not_null(roles[*],''), 'Viewer') && 'Viewer'|| ''
   alertmanager:
     alertmanagerSpec:
       # Secret, containing alertmanager.yaml config MUST be named alertmanager-kube-prometheus-stack-alertmanager
