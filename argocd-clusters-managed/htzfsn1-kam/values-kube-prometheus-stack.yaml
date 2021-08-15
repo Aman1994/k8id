@@ -46,7 +46,6 @@ kube-prometheus-stack:
         token_url: https://keycloak.kam.obmondo.com/auth/realms/devops/protocol/openid-connect/token
         api_url: https://keycloak.kam.obmondo.com/auth/realms/devops/protocol/openid-connect/userinfo
         client_id: grafana
-        client_secret: 2a13b143-6288-4abd-ac88-6f2e00a9f1d7
         role_attribute_path: contains(not_null(roles[*],''), 'Admin') && 'Admin' || contains(not_null(roles[*],''), 'Editor') && 'Editor' || contains(not_null(roles[*],''), 'Viewer') && 'Viewer'|| ''
   alertmanager:
     alertmanagerSpec:
