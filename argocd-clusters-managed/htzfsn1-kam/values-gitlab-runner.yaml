@@ -1,1 +1,2 @@
-gitlabUrl: https://gitlab.enableit.dk/
+gitlab-runner:
+  gitlabUrl: https://gitlab.enableit.dk/
