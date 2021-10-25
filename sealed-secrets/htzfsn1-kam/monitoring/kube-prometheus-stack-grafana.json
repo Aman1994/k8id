@@ -1,0 +1,22 @@
+{
+  "kind": "SealedSecret",
+  "apiVersion": "bitnami.com/v1alpha1",
+  "metadata": {
+    "name": "kube-prometheus-stack-grafana",
+    "namespace": "monitoring",
+    "creationTimestamp": null
+  },
+  "spec": {
+    "template": {
+      "metadata": {
+        "name": "kube-prometheus-stack-grafana",
+        "namespace": "monitoring",
+        "creationTimestamp": null
+      },
+      "data": null
+    },
+    "encryptedData": {
+      "grafana-keycloak-secret": "AgCALadbwda39iX4fcJTe6VQcv7lQ769Mdaa+WoMRFOQDBCvL6ccRg0WUYgznhlovwhMW9+AKNd9iD62NdmF6KXL4nQmaw51Ok65Mvt97/IwtlufBSgM5j4AwovATnBX0yXzW7clLm1LbveEiAR3Z8cptK5eqV32+heEgsxITLe6oUzQyCd6caa6pLz+glQ3WbLsbP2fCwlpN36KtceEbpqUIjTV/XgW9o2dgnk5FKs2BCvde5fzE/dXn3dJ/iSfSdXZUOOL8MdvCn/tIFcD3t0alSHBVuaPY3EbnGx/UBt3Hx9AOR+DzE5qV8wT9245VjEX6/t+zN/x++qUKzjzmGA3wnVqkh4DwvxXqPD2ToHq7LoDVm3BbJNlH5wgZHuMYJJOSJIxG/JX10CikkB+ybuTg00MScLRZ4mAxms/I9mRR0cp3FOdMBVva4gnmjm8FDfDZmwPMza7tNVchli+57jSB38lb6gp46gVPlM0TN+aJ7mzt1wbLK2jgLIUzlgpmiWL8VUqLElTdrMynsYI02bNZlSx06gly6YVUyLwJvkJHteqGPsVTjOQccX2PI3CaxaeMn71xB8p+CrsOhEh98PFTFjj9PpTRNOFJeguOLyahpiOyvpk5lwsgfXFy/Ys2I9Y+YOMLmS8cSuKaTfO1eyHSE8SuIeQAe5Q8jdQkuoQ8wlZRg2p+LS7eMwBnAlvkwTH5ArQ1XscS6D62R78S0+/AuG2Qf04DZitGMRrxsglxsNTD9s="
+    }
+  }
+}
