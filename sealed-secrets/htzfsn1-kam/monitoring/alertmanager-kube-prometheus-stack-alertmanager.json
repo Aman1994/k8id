@@ -2,14 +2,14 @@
   "kind": "SealedSecret",
   "apiVersion": "bitnami.com/v1alpha1",
   "metadata": {
-    "name": "alert-manager-secret",
+    "name": "alertmanager-kube-prometheus-stack-alertmanager",
     "namespace": "monitoring",
     "creationTimestamp": null
   },
   "spec": {
     "template": {
       "metadata": {
-        "name": "alert-manager-secret",
+        "name": "alertmanager-kube-prometheus-stack-alertmanager",
         "namespace": "monitoring",
         "creationTimestamp": null
       },
