@@ -52,4 +52,4 @@ kube-prometheus-stack:
       # Secret, containing alertmanager.yaml config MUST be named alertmanager-kube-prometheus-stack-alertmanager
       useExistingSecret: true
       secrets:
-       - "alertmanager-kube-prometheus-stack-alertmanager"
+       - "alertmanager-config"
