@@ -1,0 +1,23 @@
+{
+  "kind": "SealedSecret",
+  "apiVersion": "bitnami.com/v1alpha1",
+  "metadata": {
+    "name": "alertmanager-kube-prometheus-stack-alertmanager",
+    "namespace": "monitoring",
+    "creationTimestamp": null
+  },
+  "spec": {
+    "template": {
+      "metadata": {
+        "name": "alertmanager-kube-prometheus-stack-alertmanager",
+        "namespace": "monitoring",
+        "creationTimestamp": null
+      },
+      "type": "kubernetes.io/tls",
+      "data": null
+    },
+    "encryptedData": {
+      "alertmanager.yaml": "AgCrm4dCRrEHtCqzp288g/llrcxIPYWIfKz57V8jucmAuafK86wLUpg87Df4EVIkeQ4ijC28sZtaInq9OpJAFgwB7AuyIYbmZmlh3v6AqP5tlUpbdf+OVWqwXAqyrpPo0P/IQRE8FHefUgppISOyFv8aOS/RB/6uBPw4JdNoEaXxUP8C9tUD1wMEmSHmRQqHZ2OM37af7DwtVjLxb5KOML7rhxPDSl2gGs24JHAhxjSYqYQgKGmTCubBctraBCvs+gNYTCOffd/3N1e7veD2lFiwRBJ686azpy3uePgkHezaMgXUwfOOYjJvzrXkoRHsIIitx4fi3t3e6uxoJT2VydPiu4HP6GfNmFxiM2OZM2kFwFH+mYajIHUaRajY7VbmNwPBFiyMhDL05K6Z6si4MSrFh+dAZt7pIR6TwC9obRDf1qy0R787jl2V/Zv6feyDHzMtGOsqcWqEa5mZ/EadDoJTzd4wBJXlkwgdn5go5bq7lL6y1mZvb5ZKR4fiTJcUCmIUPyFbN1bVZalq9D2IR4cJ8JIdB83eHaooqQDF4/nPonMmr5dcpCrisKDMmKCBvfKeKHmsRQ+N3kp168J6LHJs+3tfe8oSgv0jaEVu/w/YSCDXRtD1SxKnMxXKI9vcE0rVKyvaR4X7KAYxPzu2I2BbRYCrv0CcNUeZqZ9ZtdHDzsjjcMNtVOn7eVpF3U64bUAOAM2tlilQymvnJux5Mn7nuNzUCXltFRTA+ZPUq1ImD6CQgjw/vo0LkS1K4zZrWMwkeNKQYdeBwYIRBZCtI5L0JQmRRoxejxD8ZwnApAI6Y+BJ6LvxsQjVfO4rIwB7vT1jRybaP925PdyFnG/GFoiNU+aQzb44ZfNtHyhLY+cJnHbJQZ6XkhY7JO8eeRospk8OhOYehEBnejL4AfXddb02eqCBl/GZn3oVhBMSqjRjvDTkgPiUug37lahe0OvmfDzcsV3QPS4Wj24d1nVZoOjdqUjzoMVEdXZxcwDH48sBAlwDo1yOiMhZZR48ghYq5ZUPmas2SacwTwOS0cXm07K0jLbyyCM4raYC17EvDHhnoPNQnP3/A8GLfbdkSr/UemMzl/Kx5gDXO56EWY8VdhjOuugLfmcH/fZtN/32maJSiEZyscMiSpTeTHxEU2bHzHDyN97+hIZ8zyOSdglz+CYV7Er5RysMnKJN+GxZmjFM4hLLBN7eH5LkGpAEqkJQXzbACsksqlFa889Y6IgfIY7E/Yqague8ebUtxIPkR1YIp5J4OgubgCsz2mKdMEXUK/xEfZftnVPYaM27REn97Q6meEVlJMrVyNpo9vLJbIN1+iXOPwTlRCFHk1RcOaDwsNwi+x4cau0JXuQIxpaFrY9XkX5L8ipukcgKKiS5WWNfw7adhfoh0ygR/txKno9i9/GPwqb7wtqQJRhMRrr+2Ks7vSw03P5SftgL7fQ7u48YWLEwG6HuFI3Gxp9qLKbRepJ/E7ki/QeMJh8d6IEVWwsVgMdG4+baCEnehvbBKkbI6G73XpwePo/cF3WVkcFmBaB/w+VzUOgT2WmCXqRRcfqVm3ilAWkdmw1j06GZ9L7ixCNLuzRNOuSXNdsBaH9tZgjoIuA7Dyyg1mErn+XsuFaqV6lvwYFsy+l4UUZjxZ6psuRoopGbJtvCS2maSb9UvXJKLiVBBzbwxC5eTyuLHzX15RncKqM5"
+    }
+  }
+}
