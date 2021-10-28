@@ -2,22 +2,20 @@
   "kind": "SealedSecret",
   "apiVersion": "bitnami.com/v1alpha1",
   "metadata": {
-    "name": "alertmanager-kube-prometheus-stack-alertmanager",
+    "name": "alertmanager-config",
     "namespace": "monitoring",
     "creationTimestamp": null
   },
   "spec": {
     "template": {
       "metadata": {
-        "name": "alertmanager-kube-prometheus-stack-alertmanager",
+        "name": "alertmanager-config",
         "namespace": "monitoring",
         "creationTimestamp": null
-      },
-      "type": "kubernetes.io/tls",
-      "data": null
+      }
     },
     "encryptedData": {
-      "alertmanager.yaml": "AgBLsZ8RTdzeFJDT2ZxSK/xFNK5wTMMxPERAjThnebQ0TtHH1FFxqdVHmQQ2cnN6igrSiQ7GTDSct2NFUXzyzptgG7H96jaIRl84rDTHgtuZkiNJ58H4ctkDRdAuz0/LQ8rEVxD/uVS+IVqLX9+zpfyuZ+yHBNxlH/A3bsTk2bsHOLnWlhyPFmj0NP4pZ9RO7Aw6Hxr5XnCzccJ+FaD3tI89374nbZPQBPYtWnPBv1FZ6H0Z9M+tdLYiua7JvH6R0VY2J6CnWxeRRhWPJbCPXO5QFa9SKnNU6spnyJMAJ26AAyfAdWMqlmaqBryBFd4O2Yp8Zu2QfX4qbWNl+1WSmwjqg2K4pc8MogA1EQI7Moue02xq+gYYbbc9/x/bkzQX6Svys0oXg+ftYGrrz+GQEY8rtE+jFqmDeh+UGNNnmnrMm3vttdg8dn6GxJxQyEiHIP3pQ0o1Dfjm5Cma7AtOYEYPiK0vwA3+1RE/mf0AoZtYm3D8ZwTkTOmo1/nMz8iTS/Y7jsZXJCOvTUns6nngCx+nRnQ2WoNifDf+LTFMWt4Z8XsYwJ4sTdyqggSy1dhNA7vT6eiFovy6eHOhMFsO5G1611RgdVgBLElxR2rtEEGelXen3T5zWLoeJtsuhGEZu80CHsk+3rPtn/B+Nu/FcR/k9W+cLC6DPSJABFQAdkHRW+1yEuZ8GuFHkDQrfexOhs2gnsQTvvpDuTjtGI/dH/OpvauurIdF0qUzWmY+xY7VRAQ5cFJua0s6s5VVHnL9p6hvyisb32aUkF8CIG0l/EXFAV4Co1IBB8KMZggpPr7EWQPc6vfAU0WlvY7Z0JpArj0yswzowJZND6nLn36EMAOc12VB4OQhc0YbFwozPEd3ogCDXu+s6OFQaCwRoOldwlnCb4DXUsD4nIkz+WN7FvxRy9odbD2ii4wqNAmp/K7bM0bXUGMtgsAzaDnNvf1TmcGqTmA6ILymMDfw2J/rbHeuTP83SPMOwnM3G/hoFlvUZkQjE1htOwBMgCv28IpBtGPPE0cvjbce8tbiXDF1f19RmBIW5VE3io07CAv7BRUiNepvamfB3hjCzHxOY4N+I6yt0i0DV3o2gWf7O/y09NyUPvJd9I3ZSC0Q0HROSV4AdwZo1OHTj8H4cvZjOrIwEKdyh4XQUIueobkPBESCWGrRq8InBCrhux/44/rg9bLnloUPmwXl4MxBem1xJ3mKeNygiYAGZIPaSKbLg0qVPK9HJ2SXWznGqog2hlVKiLwhQjr9T+cyIxCxSkmgB8X860Vbu7j8kCyRK1yeDCt9j7sJXYcAXq6coBS2kSXVtexdfnNiGFeZ48IDmbH4j3MHrtGNeY/qe3UODP9q1JI/HesGjExia8JFKAT/xjQsyb8LvPxB8cG0RyYaUSzxEcNaxHUlrdC8Go1z/0JFLJErulq7oEqFBRwPz3MC0OZYMOJIpHQVi2lbiF1mW1Rm2SYaWU5e7oYzwkutMijBMtzenFhqpbbDIqVuxKqcOxcCeKKZOnWX1uV8Mu0yITocSE6L/XSZIJKBDdb0fQHWbtM8Ln4Nw0qyYONbVvN8IeOeSeqcibU4OEM9nq2H3SstZNEXdhuLWHUohULxzIDz+j8ZTbNwKOcU4DguzXKxjbJwVfosFtR/QUlbSb83WX2OyH+r97LBoKsIwSpzrEyLEZgxkpRIDSbMAw0n"
+      "alertmanager.yaml": "AgCLWL6UDjtQosaSCbiVndQswqwj0KC4TZotDczW5Wpb9+fBXKDT+ARIDk+7dNGiJyC6ZESb81t0/lOmAqfu9uWDusBSHNLr8kVBJJEqIejShVfKm63FUW+i2ac/8Eomh45H6o5JRPQOu0+QaVPPt3tXQOh/oQ5Mme9vBHU6qxKA/R77dy0Y36W7xwBPxL2hGHmUjfdteKsPPLXW/H6lgZ/0NBHrkat41PF6al7lcbXWn+pDIi/SZm9Q8pzh8QbcO76RCIWvwpwfzasP2GyKJckkhUoBaLxZwQM8C7XKLsaskW05GJTL87KQF3rf+odedWzFKEi4A1j7E9Pnep+sngvtJ1AZkD+J1YxEcucNMqx0fkf0zXzvb7Js7fiKNMX/TaFFTqsnfCF2knxqQ3uVG0nnM8IUDlpWUWpTXqQxc44ehmqH9W3PbWExzOoycbiAWqoQH/2A7QX8V1N12rJBiQiCEfZQUJ7wBz+HSUHyPqF1q6TBzje3j6uQUe857HfVLSI4YCwgTsX9XlKHc74evxWTXoTEIKo9/4W0uR67kI6fyUkJSBafcDJuT6BG2VQl/m3CoDZSuNWBjt53lp7ihADACl1wzZ2gsxGgRc7HR986+6vqVV1xb18+Gl7sZr9gf/SKj+avheXbI9TUpBQ4DMvBhC9DJqRTt+/atxOmhOQ8SGgGV8pgZRVXtuh2gIaZvW7AQoKML66GNB7EbwGEuAmVD08bPJnXTZIc7vt8AoudOjD39U9gGDyuV0nHR+JzYflO7aNqOrNauCD9v0N+eSZ00J74EFSKycX3m0/nUArvMQpGGQlQyTVOE38EzszURwz+GDXhhqIYD/1d1cdwEb/RbCgv80STsKX4qibKdUCi9p7r4o1aUaGxomaYaPoVHr92aXaK14eIuJffR0M8oo227g6LttpqrwQT6ZZhexDB4cS5SNPSmJOtyU1+zk043XNlPfzaUxcjdYm0bGKGG9plK5IMJWnjiEtcYsJllKyZuzPr6L10pqoWHaOGZo5kHEZWKv3kCOKNC2FoJeWSr2XbzjF90fguqwi6ZtWRCqhqj4wWgycvkLqG8wrEFHDLDAA/J51tQQc3kUk9+Hhh4WsR6sH9pwQNqsVAurC3iNxcbyN9xcB/10/mdfFs/aPJV0oOfQRqR6O4urgaOrVFAO7qDQ4iPM1TrByljCWHcJ88HezEmy3ZM/io4267OqxeXKiyI7NcGwNiyItKwTE98krAM3DXwl0K1B45lMufczKctvP4dwR7k97Bk70Zw5VjV+GXt/YOkGmmWagHFLrz4F3JmBjLbjhDaF38mJYrNXJjzZMFpkUfd+WuIhrE66r2tNtd2nykU0i4jNzz5rRlNj+vs7zimld8HONrqTHJS90wdl+Z2lYxcjCZTtSR6bFs6egHi6UCi60O7Z0A9hOaqdgjfcUAVDyX43F+ofyx/2qsT9c9zYTMul/MEltYb0tolDKeswrBv4zaiCQyAWZAosTbRyJku/lPUIEh7jMdpJMhGbmcz6jT9G8cZ50+iBG0hio6S+cXB5q9OI+KkZz7qtLRNkUVTAZeXaDu98tXaZaYMvHlt1gBa9GB81bnsNZ0N3MGDU6k1OLpUL/VZg=="
     }
   }
 }
