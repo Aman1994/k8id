@@ -8,7 +8,7 @@ metadata:
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: graylog
+    namespace: system
   project: default
   source:
     path: argocd-helm-charts/kubernetes-dashboard
