@@ -1,0 +1,22 @@
+{
+  "kind": "SealedSecret",
+  "apiVersion": "bitnami.com/v1alpha1",
+  "metadata": {
+    "name": "alertmanager-kube-prometheus-stack-alertmanager",
+    "namespace": "monitoring",
+    "creationTimestamp": null
+  },
+  "spec": {
+    "template": {
+      "metadata": {
+        "name": "alertmanager-kube-prometheus-stack-alertmanager",
+        "namespace": "monitoring",
+        "creationTimestamp": null
+      },
+      "data": null
+    },
+    "encryptedData": {
+      "alertmanager.yaml": "AgARFFLCxycMynz31sPpomZcWmyqRCgHzUogWzcHEiPpvIvlUWehjbSvAPQgnVo7murtiH2GTSph8i/SJFftBex7fXJrfUwM6oOuqGkHSuDRg9GB0nElIyBMgKkRz45ULsj2Ma5GTEl6gb2mlP6kfvzj1kluMei5cjAQjHjDg6eOpdukX6sxZKSxrciJAKGPUfFFlwNVZd0Qu4OwpBjn+dSqlZ8Cc1UN43KRSVZIdFQMWcWmnj+o0ec72acEyxUUNgPYZyum/fzXnyj6vsTIvZqOmXkdnS5yAwGO3yHBa7LrX7vMVVc4hWK1l15CDxw7PGud3XUSod4iufRndQkY5wJ7k5MBBc/wkfK6HFsXZXYWXyWFhNgFhs7Jk25gSCKjGFmDgqI/SZ36B1msuK3NRnlPsSLlOJU6RxaV8wru9bc96NUwAWQ4QRtua8Liy7W4Qq8/+DPKyx9wH7+bPHxZ6KYUuxgG8jkdxzlKK3bpaW3tsPTTWS3mkF4Ss8CUi822QJwKDFr3GDT4xUA9IroEI7xtxetMGg+ykDhsT22VGo8//cUa4geo033eteIvmEFrcrg3B7jrxfH9ujfCll2b1X/N151qem/TBttq+0/XJwjcmlKEYJwQzBAw0uVfNKEoJ3+kO/yyCpNrBKLDWum6JxohM01SZu6LHASRxL2RcI8CgU3fpr1VhchDXXcx59rZmiWQPiekXJNmuHrK0u2dw24q3CIUMKrqml9eyXGf/g8qeh9Wv+Rd9CrKbAV6CaAnFwcgZhRqhzZh84RyTApBTjvlxcWgwVE8N0EPl+ObGYzHyu0KztY0u/9fpi4B0hzA8H+iQm5BzuhODR2RZrgHiYvxm7HYqIFNPsXvGoXNvSvnH321qOzD9LivDT41wResekuW8+UODF7FV4DCAt+oVsr5w1y50mUl2arXkI0DJi4GTZk2beFlAQ5KxukZOEzQuEvoo/06lehugNkRPZLPxctz+fk+kmXuJ25twVu5D0B2hVjAktO+OQy88NjcTBkvm8B1SbbGJ2VQ58OPtSxq4/zk8u+ZTRgMwZH78BkwRyiQYS8+mQLJFAaUhLuX7YilrmsZha3e7vldp1sgDzB/LeZgEvSSH6sBFXuIUJsc7FOZEPeu4lYgSQQ4M9ssOcJ29tg4BrGLpBJKnuXZGLuoeJhMkMD/5yVGEhBaD1Dm2ZOF24orttdvl+oTVNOLwqV9/R3Ji15fVgBcZEO8JFvD+srrELdEXh/C0N1f3+gp5nsVcQpZtQ3s67hhKa1BVDpD05wlip9djMCFwOV6ycDOrWLFujIshFL8X1rfnsb8qpQy62Kh6ZvDp9YyAvEDxmQEDDH0UC1BzCuDS+STknxQ3XyzLTTsyOEG4DsbS1EbCPl3swcWHbjnExmn+TrQ4nbvGxogXriMN3gNNJ0iyL8jI33nkz7a87ksEH7Jo+OKNdPOz+noQweigjSpcF5qndi1gWVxLJMxZfvZhnJAm0EV0bmVJgWEDLRoLutlCWPjh7KB6QBMHgO+KvQke2gwEXEpJNrL/N8kqjL7Wypi20Xfb4iBTRpPGNGku4z2UQ+AJarrMXo6sHFSw2bga1iF+X5N3EHVgaYege+WTi6A2Ol3H77EAIBqfK3KktkIRTWoFUkrJw=="
+    }
+  }
+}
