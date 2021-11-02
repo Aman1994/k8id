@@ -13,6 +13,7 @@ keycloak:
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt
       kubernetes.io/ingress.class: traefik-cert-manager
+      acme.cert-manager.io/http01-edit-in-place: true
     rules:
     - host: keycloak.kam.obmondo.com
       paths:
