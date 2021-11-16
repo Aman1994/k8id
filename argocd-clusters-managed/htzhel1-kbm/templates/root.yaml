@@ -11,7 +11,7 @@ spec:
     namespace: argocd
   project: default
   source:
-    path: argocd-clusters-managed/htzhel1-kbm
+    path: argocd-clusters-managed/htzhel1-kbm/
     repoURL: https://gitlab.enableit.dk/kubernetes/argocd-apps.git
     targetRevision: HEAD
   syncPolicy:
