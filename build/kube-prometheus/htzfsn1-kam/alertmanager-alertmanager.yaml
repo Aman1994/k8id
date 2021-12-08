@@ -35,5 +35,5 @@ spec:
     runAsNonRoot: true
     runAsUser: 1000
   serviceAccountName: alertmanager-main
-  useExistingSecret: true
+  #useExistingSecret: true
   version: 0.21.0
