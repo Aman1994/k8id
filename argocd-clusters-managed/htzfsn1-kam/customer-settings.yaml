@@ -1,0 +1,12 @@
+---
+cluster:
+  name: htzfsn1-kam
+argo-cd:
+  secret:
+    createSecret: false
+  repo:
+    url: https://gitlab.enableit.dk/kubernetes/argocd-apps.git
+    oci: oci://ghcr.io/Obmondo
+    name: kam-internal-k8s
+    auth:
+      git: https
