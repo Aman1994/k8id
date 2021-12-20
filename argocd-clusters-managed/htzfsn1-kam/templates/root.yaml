@@ -4,16 +4,16 @@ metadata:
   name: root
   namespace: argocd
   finalizers:
-  - resources-finalizer.argocd.argoproj.io
+    - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
   project: default
   source:
-    path: argocd-clusters-managed/htzfsn1-kam/
-    repoURL: ssh://git@gitlab.enableit.dk:2223/kubernetes/argocd-apps.git
+    path: argocd-clusters-managed/htzfsn1-kam
+    repoURL: https://gitlab.enableit.dk/kubernetes/argocd-apps.git
     targetRevision: HEAD
   syncPolicy:
     syncOptions:
-    - ApplyOutOfSyncOnly=true
+      - ApplyOutOfSyncOnly=true
