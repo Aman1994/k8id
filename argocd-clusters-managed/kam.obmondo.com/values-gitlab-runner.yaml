@@ -1,3 +1,0 @@
-gitlab-runner:
-  replicas: 3
-  gitlabUrl: https://gitlab.enableit.dk/
