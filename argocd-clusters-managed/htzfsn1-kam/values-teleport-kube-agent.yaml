@@ -1,6 +1,0 @@
----
-teleport-kube-agent:
-  roles: kube
-  kubeClusterName: kam.obmondo.com
-  proxyAddr: teleport.obmondo.com:443
-  labels: {'env': 'dev'}
