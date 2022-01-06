@@ -12,15 +12,15 @@ metadata:
     app.kubernetes.io/managed-by: Helm
   annotations:
     seccomp.security.alpha.kubernetes.io/allowedProfileNames: 'docker/default,runtime/default'
-    seccomp.security.alpha.kubernetes.io/defaultProfileName:  'docker/default'
+    seccomp.security.alpha.kubernetes.io/defaultProfileName: 'docker/default'
     apparmor.security.beta.kubernetes.io/allowedProfileNames: 'runtime/default'
-    apparmor.security.beta.kubernetes.io/defaultProfileName:  'runtime/default'
+    apparmor.security.beta.kubernetes.io/defaultProfileName: 'runtime/default'
 spec:
   privileged: false
   allowPrivilegeEscalation: false
   requiredDropCapabilities:
     # Default set from Docker, with DAC_OVERRIDE and CHOWN
-      - ALL
+    - ALL
   volumes:
     - 'configMap'
     - 'emptyDir'
@@ -124,7 +124,7 @@ kind: PodSecurityPolicy
 metadata:
   name: argocd-prometheus-node-exporter
   namespace: monitoring
-  labels:     
+  labels:
     app: prometheus-node-exporter
     heritage: Helm
     release: argocd
@@ -136,7 +136,7 @@ spec:
   # allowPrivilegeEscalation: false
   # This is redundant with non-root + disallow privilege escalation,
   # but we can provide it for defense in depth.
-  #requiredDropCapabilities:
+  # requiredDropCapabilities:
   #  - ALL
   # Allow core volume types.
   volumes:
@@ -180,7 +180,7 @@ metadata:
   name: argocd-kube-prometheus-sta-alertmanager
   labels:
     app: kube-prometheus-stack-alertmanager
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -194,7 +194,7 @@ spec:
   # allowPrivilegeEscalation: false
   # This is redundant with non-root + disallow privilege escalation,
   # but we can provide it for defense in depth.
-  #requiredDropCapabilities:
+  # requiredDropCapabilities:
   #  - ALL
   # Allow core volume types.
   volumes:
@@ -234,7 +234,7 @@ metadata:
   name: argocd-kube-prometheus-sta-operator
   labels:
     app: kube-prometheus-stack-operator
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -248,7 +248,7 @@ spec:
   # allowPrivilegeEscalation: false
   # This is redundant with non-root + disallow privilege escalation,
   # but we can provide it for defense in depth.
-  #requiredDropCapabilities:
+  # requiredDropCapabilities:
   #  - ALL
   # Allow core volume types.
   volumes:
@@ -288,7 +288,7 @@ metadata:
   name: argocd-kube-prometheus-sta-prometheus
   labels:
     app: kube-prometheus-stack-prometheus
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -302,8 +302,8 @@ spec:
   # allowPrivilegeEscalation: false
   # This is redundant with non-root + disallow privilege escalation,
   # but we can provide it for defense in depth.
-  #requiredDropCapabilities:
-  #  - ALL
+  # requiredDropCapabilities:
+  #   - ALL
   # Allow core volume types.
   volumes:
     - 'configMap'
@@ -401,7 +401,7 @@ metadata:
     app: kube-prometheus-stack-alertmanager
     app.kubernetes.io/name: kube-prometheus-stack-alertmanager
     app.kubernetes.io/component: alertmanager
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -420,7 +420,7 @@ metadata:
     app: kube-prometheus-stack-operator
     app.kubernetes.io/name: kube-prometheus-stack-prometheus-operator
     app.kubernetes.io/component: prometheus-operator
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -439,7 +439,7 @@ metadata:
     app: kube-prometheus-stack-prometheus
     app.kubernetes.io/name: kube-prometheus-stack-prometheus
     app.kubernetes.io/component: prometheus
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -474,7 +474,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack-alertmanager
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -568,7 +568,7 @@ metadata:
   labels:
     grafana_datasource: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -599,7 +599,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -1208,7 +1208,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -2954,7 +2954,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -4835,7 +4835,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -6011,7 +6011,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -7126,7 +7126,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -8660,7 +8660,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -11683,7 +11683,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -14426,7 +14426,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -15403,7 +15403,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -17829,7 +17829,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -19814,7 +19814,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -21964,7 +21964,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -24211,7 +24211,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -25674,7 +25674,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -27409,7 +27409,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -28372,7 +28372,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -29362,7 +29362,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -30352,7 +30352,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -30928,7 +30928,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -32155,7 +32155,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -33389,7 +33389,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -34645,7 +34645,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -35744,7 +35744,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -36671,7 +36671,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -38109,7 +38109,7 @@ metadata:
     app.kubernetes.io/managed-by: Helm
   name: argocd-grafana-clusterrole
 rules:
-- apiGroups: [""] # "" indicates the core API group
+- apiGroups: [""]               # "" indicates the core API group
   resources: ["configmaps", "secrets"]
   verbs: ["get", "watch", "list"]
 ---
@@ -38126,7 +38126,7 @@ metadata:
 rules:
 - apiGroups: ['policy']
   resources: ['podsecuritypolicies']
-  verbs:     ['use']
+  verbs: ['use']
   resourceNames:
   - argocd-kube-state-metrics
 ---
@@ -38282,7 +38282,7 @@ kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: psp-argocd-prometheus-node-exporter
-  labels:     
+  labels:
     app: prometheus-node-exporter
     heritage: Helm
     release: argocd
@@ -38291,7 +38291,7 @@ metadata:
 rules:
 - apiGroups: ['extensions']
   resources: ['podsecuritypolicies']
-  verbs:     ['use']
+  verbs: ['use']
   resourceNames:
   - argocd-prometheus-node-exporter
 ---
@@ -38302,7 +38302,7 @@ metadata:
   name: argocd-kube-prometheus-sta-operator
   labels:
     app: kube-prometheus-stack-operator
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -38389,7 +38389,7 @@ metadata:
   name: argocd-kube-prometheus-sta-operator-psp
   labels:
     app: kube-prometheus-stack-operator
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -38400,7 +38400,7 @@ metadata:
 rules:
 - apiGroups: ['policy']
   resources: ['podsecuritypolicies']
-  verbs:     ['use']
+  verbs: ['use']
   resourceNames:
   - argocd-kube-prometheus-sta-operator
 ---
@@ -38411,7 +38411,7 @@ metadata:
   name: argocd-kube-prometheus-sta-prometheus
   labels:
     app: kube-prometheus-stack-prometheus
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -38445,7 +38445,7 @@ metadata:
   name: argocd-kube-prometheus-sta-prometheus-psp
   labels:
     app: kube-prometheus-stack-prometheus
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -38456,7 +38456,7 @@ metadata:
 rules:
 - apiGroups: ['policy']
   resources: ['podsecuritypolicies']
-  verbs:     ['use']
+  verbs: ['use']
   resourceNames:
   - argocd-kube-prometheus-sta-prometheus
 ---
@@ -38523,7 +38523,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
   name: psp-argocd-prometheus-node-exporter
-  labels:     
+  labels:
     app: prometheus-node-exporter
     heritage: Helm
     release: argocd
@@ -38545,7 +38545,7 @@ metadata:
   name: argocd-kube-prometheus-sta-operator
   labels:
     app: kube-prometheus-stack-operator
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -38569,7 +38569,7 @@ metadata:
   name: argocd-kube-prometheus-sta-operator-psp
   labels:
     app: kube-prometheus-stack-operator
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -38593,7 +38593,7 @@ metadata:
   name: argocd-kube-prometheus-sta-prometheus
   labels:
     app: kube-prometheus-stack-prometheus
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -38617,7 +38617,7 @@ metadata:
   name: argocd-kube-prometheus-sta-prometheus-psp
   labels:
     app: kube-prometheus-stack-prometheus
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -38647,10 +38647,10 @@ metadata:
     app.kubernetes.io/version: "8.0.5"
     app.kubernetes.io/managed-by: Helm
 rules:
-- apiGroups:      ['extensions']
-  resources:      ['podsecuritypolicies']
-  verbs:          ['use']
-  resourceNames:  [argocd-grafana]
+- apiGroups: ['extensions']
+  resources: ['podsecuritypolicies']
+  verbs: ['use']
+  resourceNames: [argocd-grafana]
 ---
 # Source: kube-prometheus-stack/charts/kube-prometheus-stack/charts/grafana/templates/tests/test-role.yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -38665,10 +38665,10 @@ metadata:
     app.kubernetes.io/version: "8.0.5"
     app.kubernetes.io/managed-by: Helm
 rules:
-- apiGroups:      ['policy']
-  resources:      ['podsecuritypolicies']
-  verbs:          ['use']
-  resourceNames:  [argocd-grafana-test]
+- apiGroups: ['policy']
+  resources: ['podsecuritypolicies']
+  verbs: ['use']
+  resourceNames: [argocd-grafana-test]
 ---
 # Source: kube-prometheus-stack/charts/kube-prometheus-stack/templates/alertmanager/psp-role.yaml
 kind: Role
@@ -38678,7 +38678,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack-alertmanager
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -38689,7 +38689,7 @@ metadata:
 rules:
 - apiGroups: ['policy']
   resources: ['podsecuritypolicies']
-  verbs:     ['use']
+  verbs: ['use']
   resourceNames:
   - argocd-kube-prometheus-sta-alertmanager
 ---
@@ -38743,7 +38743,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack-alertmanager
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -38804,7 +38804,7 @@ spec:
     protocol: TCP
     port: 8080
     targetPort: 8080
-  
+
   selector:
     app.kubernetes.io/name: kube-state-metrics
     app.kubernetes.io/instance: argocd
@@ -38817,7 +38817,7 @@ metadata:
   namespace: monitoring
   annotations:
     prometheus.io/scrape: "true"
-  labels:     
+  labels:
     app: prometheus-node-exporter
     heritage: Helm
     release: argocd
@@ -38843,7 +38843,7 @@ metadata:
   labels:
     app: kube-prometheus-stack-alertmanager
     self-monitor: "true"
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -38870,7 +38870,7 @@ metadata:
   labels:
     app: kube-prometheus-stack-coredns
     jobLabel: coredns
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -38897,7 +38897,7 @@ metadata:
   labels:
     app: kube-prometheus-stack-kube-controller-manager
     jobLabel: kube-controller-manager
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -38925,7 +38925,7 @@ metadata:
   labels:
     app: kube-prometheus-stack-kube-etcd
     jobLabel: kube-etcd
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -38953,7 +38953,7 @@ metadata:
   labels:
     app: kube-prometheus-stack-kube-proxy
     jobLabel: kube-proxy
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -38981,7 +38981,7 @@ metadata:
   labels:
     app: kube-prometheus-stack-kube-scheduler
     jobLabel: kube-scheduler
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -39009,7 +39009,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack-operator
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -39036,7 +39036,7 @@ metadata:
   labels:
     app: kube-prometheus-stack-prometheus
     self-monitor: "true"
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -39060,7 +39060,7 @@ kind: DaemonSet
 metadata:
   name: argocd-prometheus-node-exporter
   namespace: monitoring
-  labels:     
+  labels:
     app: prometheus-node-exporter
     heritage: Helm
     release: argocd
@@ -39077,7 +39077,7 @@ spec:
     type: RollingUpdate
   template:
     metadata:
-      labels:         
+      labels:
         app: prometheus-node-exporter
         heritage: Helm
         release: argocd
@@ -39124,7 +39124,7 @@ spec:
           volumeMounts:
             - name: proc
               mountPath: /host/proc
-              readOnly:  true
+              readOnly: true
             - name: sys
               mountPath: /host/sys
               readOnly: true
@@ -39180,7 +39180,7 @@ spec:
         checksum/sc-dashboard-provider-config: 4dee9415a0ae9cab45fadb05500d689b1a35aeba760bb7946a8fb48e6afc5abb
         checksum/secret: 67a001a02fd8a94a002a10e0309cc4273104a17b4b252b54176020e9c5e33b32
     spec:
-      
+
       serviceAccountName: argocd-grafana
       automountServiceAccountToken: true
       securityContext:
@@ -39212,7 +39212,7 @@ spec:
           imagePullPolicy: IfNotPresent
           env:
             - name: METHOD
-              value: 
+              value:
             - name: LABEL
               value: "grafana_dashboard"
             - name: FOLDER
@@ -39235,7 +39235,7 @@ spec:
               mountPath: "/var/lib/grafana"
             - name: sc-dashboard-volume
               mountPath: "/tmp/dashboards"
-      
+
             - name: sc-dashboard-provider
               mountPath: "/etc/grafana/provisioning/dashboards/sc-dashboardproviders.yaml"
               subPath: provider.yaml
@@ -39259,7 +39259,7 @@ spec:
                 secretKeyRef:
                   name: argocd-grafana
                   key: admin-password
-            
+
             - name: GF_PATHS_DATA
               value: /var/lib/grafana/
             - name: GF_PATHS_LOGS
@@ -39355,7 +39355,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack-operator
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -39373,7 +39373,7 @@ spec:
     metadata:
       labels:
         app: kube-prometheus-stack-operator
-        
+
         app.kubernetes.io/managed-by: Helm
         app.kubernetes.io/instance: argocd
         app.kubernetes.io/version: "17.0.2"
@@ -39459,7 +39459,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack-alertmanager
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -39476,7 +39476,7 @@ spec:
   externalUrl: http://argocd-kube-prometheus-sta-alertmanager.monitoring:9093
   paused: false
   logFormat: "logfmt"
-  logLevel:  "info"
+  logLevel: "info"
   retention: "120h"
   alertmanagerConfigSelector: {}
   alertmanagerConfigNamespaceSelector: {}
@@ -39499,9 +39499,9 @@ spec:
 apiVersion: admissionregistration.k8s.io/v1
 kind: MutatingWebhookConfiguration
 metadata:
-  name:  argocd-kube-prometheus-sta-admission
+  name: argocd-kube-prometheus-sta-admission
   labels:
-    app: kube-prometheus-stack-admission    
+    app: kube-prometheus-stack-admission
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -39538,7 +39538,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack-prometheus
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -39560,8 +39560,8 @@ spec:
   paused: false
   replicas: 1
   shards: 1
-  logLevel:  info
-  logFormat:  logfmt
+  logLevel: info
+  logFormat: logfmt
   listenLocal: false
   enableAdminAPI: false
   resources:
@@ -39617,7 +39617,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -39760,7 +39760,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -39894,7 +39894,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -39942,7 +39942,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -40099,7 +40099,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -40221,7 +40221,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -40543,7 +40543,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -40586,7 +40586,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -40663,7 +40663,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -41015,7 +41015,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -41040,7 +41040,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -41073,7 +41073,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -41130,7 +41130,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -41199,7 +41199,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -41232,7 +41232,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -41481,7 +41481,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -41610,7 +41610,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -41674,7 +41674,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -41746,7 +41746,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -41776,7 +41776,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -41917,7 +41917,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -41947,7 +41947,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -41990,7 +41990,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -42063,7 +42063,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -42311,7 +42311,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -42341,7 +42341,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -42386,7 +42386,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -42470,7 +42470,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -42715,7 +42715,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack-alertmanager
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -42744,7 +42744,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack-coredns
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -42773,7 +42773,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack-apiserver
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -42807,7 +42807,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack-kube-controller-manager
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -42836,7 +42836,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack-kube-etcd
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -42865,7 +42865,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack-kube-proxy
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -42894,7 +42894,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack-kube-scheduler
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -42923,7 +42923,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack-kube-state-metrics
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -42948,7 +42948,7 @@ metadata:
   name: argocd-kube-prometheus-sta-kubelet
   namespace: monitoring
   labels:
-    app: kube-prometheus-stack-kubelet    
+    app: kube-prometheus-stack-kubelet
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -43010,7 +43010,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack-node-exporter
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -43035,7 +43035,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack-grafana
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -43063,7 +43063,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack-operator
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -43099,7 +43099,7 @@ metadata:
   namespace: monitoring
   labels:
     app: kube-prometheus-stack-prometheus
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -43124,9 +43124,9 @@ spec:
 apiVersion: admissionregistration.k8s.io/v1
 kind: ValidatingWebhookConfiguration
 metadata:
-  name:  argocd-kube-prometheus-sta-admission
+  name: argocd-kube-prometheus-sta-admission
   labels:
-    app: kube-prometheus-stack-admission    
+    app: kube-prometheus-stack-admission
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -43165,7 +43165,7 @@ metadata:
     "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
   labels:
     app: kube-prometheus-stack-admission
-    
+
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -43179,8 +43179,8 @@ spec:
   # allowPrivilegeEscalation: false
   # This is redundant with non-root + disallow privilege escalation,
   # but we can provide it for defense in depth.
-  #requiredDropCapabilities:
-  #  - ALL
+  # requiredDropCapabilities:
+  #   - ALL
   # Allow core volume types.
   volumes:
     - 'configMap'
@@ -43216,13 +43216,13 @@ spec:
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name:  argocd-kube-prometheus-sta-admission
+  name: argocd-kube-prometheus-sta-admission
   namespace: monitoring
   annotations:
     "helm.sh/hook": pre-install,pre-upgrade,post-install,post-upgrade
     "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
   labels:
-    app: kube-prometheus-stack-admission    
+    app: kube-prometheus-stack-admission
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -43235,12 +43235,12 @@ metadata:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name:  argocd-kube-prometheus-sta-admission
+  name: argocd-kube-prometheus-sta-admission
   annotations:
     "helm.sh/hook": pre-install,pre-upgrade,post-install,post-upgrade
     "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
   labels:
-    app: kube-prometheus-stack-admission    
+    app: kube-prometheus-stack-admission
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -43259,7 +43259,7 @@ rules:
       - update
   - apiGroups: ['policy']
     resources: ['podsecuritypolicies']
-    verbs:     ['use']
+    verbs: ['use']
     resourceNames:
     - argocd-kube-prometheus-sta-admission
 ---
@@ -43267,12 +43267,12 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name:  argocd-kube-prometheus-sta-admission
+  name: argocd-kube-prometheus-sta-admission
   annotations:
     "helm.sh/hook": pre-install,pre-upgrade,post-install,post-upgrade
     "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
   labels:
-    app: kube-prometheus-stack-admission    
+    app: kube-prometheus-stack-admission
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -43293,13 +43293,13 @@ subjects:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
-  name:  argocd-kube-prometheus-sta-admission
+  name: argocd-kube-prometheus-sta-admission
   namespace: monitoring
   annotations:
     "helm.sh/hook": pre-install,pre-upgrade,post-install,post-upgrade
     "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
   labels:
-    app: kube-prometheus-stack-admission    
+    app: kube-prometheus-stack-admission
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -43320,13 +43320,13 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name:  argocd-kube-prometheus-sta-admission
+  name: argocd-kube-prometheus-sta-admission
   namespace: monitoring
   annotations:
     "helm.sh/hook": pre-install,pre-upgrade,post-install,post-upgrade
     "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
   labels:
-    app: kube-prometheus-stack-admission    
+    app: kube-prometheus-stack-admission
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -43378,13 +43378,13 @@ spec:
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name:  argocd-kube-prometheus-sta-admission-create
+  name: argocd-kube-prometheus-sta-admission-create
   namespace: monitoring
   annotations:
     "helm.sh/hook": pre-install,pre-upgrade
     "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
   labels:
-    app: kube-prometheus-stack-admission-create    
+    app: kube-prometheus-stack-admission-create
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -43395,9 +43395,9 @@ metadata:
 spec:
   template:
     metadata:
-      name:  argocd-kube-prometheus-sta-admission-create
+      name: argocd-kube-prometheus-sta-admission-create
       labels:
-        app: kube-prometheus-stack-admission-create        
+        app: kube-prometheus-stack-admission-create
         app.kubernetes.io/managed-by: Helm
         app.kubernetes.io/instance: argocd
         app.kubernetes.io/version: "17.0.2"
@@ -43428,13 +43428,13 @@ spec:
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name:  argocd-kube-prometheus-sta-admission-patch
+  name: argocd-kube-prometheus-sta-admission-patch
   namespace: monitoring
   annotations:
     "helm.sh/hook": post-install,post-upgrade
     "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
   labels:
-    app: kube-prometheus-stack-admission-patch    
+    app: kube-prometheus-stack-admission-patch
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/instance: argocd
     app.kubernetes.io/version: "17.0.2"
@@ -43445,9 +43445,9 @@ metadata:
 spec:
   template:
     metadata:
-      name:  argocd-kube-prometheus-sta-admission-patch
+      name: argocd-kube-prometheus-sta-admission-patch
       labels:
-        app: kube-prometheus-stack-admission-patch        
+        app: kube-prometheus-stack-admission-patch
         app.kubernetes.io/managed-by: Helm
         app.kubernetes.io/instance: argocd
         app.kubernetes.io/version: "17.0.2"
