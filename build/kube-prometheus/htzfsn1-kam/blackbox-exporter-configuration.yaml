@@ -1,45 +1,6 @@
 apiVersion: v1
 data:
-  config.yml: |-
-    "modules":
-      "http_2xx":
-        "http":
-          "preferred_ip_protocol": "ip4"
-        "prober": "http"
-      "http_post_2xx":
-        "http":
-          "method": "POST"
-          "preferred_ip_protocol": "ip4"
-        "prober": "http"
-      "irc_banner":
-        "prober": "tcp"
-        "tcp":
-          "preferred_ip_protocol": "ip4"
-          "query_response":
-          - "send": "NICK prober"
-          - "send": "USER prober prober prober :prober"
-          - "expect": "PING :([^ ]+)"
-            "send": "PONG ${1}"
-          - "expect": "^:[^ ]+ 001"
-      "pop3s_banner":
-        "prober": "tcp"
-        "tcp":
-          "preferred_ip_protocol": "ip4"
-          "query_response":
-          - "expect": "^+OK"
-          "tls": true
-          "tls_config":
-            "insecure_skip_verify": false
-      "ssh_banner":
-        "prober": "tcp"
-        "tcp":
-          "preferred_ip_protocol": "ip4"
-          "query_response":
-          - "expect": "^SSH-2.0-"
-      "tcp_connect":
-        "prober": "tcp"
-        "tcp":
-          "preferred_ip_protocol": "ip4"
+  config.yml: "\"modules\": \n  \"http_2xx\": \n    \"http\": \n      \"preferred_ip_protocol\": \"ip4\"\n    \"prober\": \"http\"\n  \"http_post_2xx\": \n    \"http\": \n      \"method\": \"POST\"\n      \"preferred_ip_protocol\": \"ip4\"\n    \"prober\": \"http\"\n  \"irc_banner\": \n    \"prober\": \"tcp\"\n    \"tcp\": \n      \"preferred_ip_protocol\": \"ip4\"\n      \"query_response\": \n      - \"send\": \"NICK prober\"\n      - \"send\": \"USER prober prober prober :prober\"\n      - \"expect\": \"PING :([^ ]+)\"\n        \"send\": \"PONG ${1}\"\n      - \"expect\": \"^:[^ ]+ 001\"\n  \"pop3s_banner\": \n    \"prober\": \"tcp\"\n    \"tcp\": \n      \"preferred_ip_protocol\": \"ip4\"\n      \"query_response\": \n      - \"expect\": \"^+OK\"\n      \"tls\": true\n      \"tls_config\": \n        \"insecure_skip_verify\": false\n  \"ssh_banner\": \n    \"prober\": \"tcp\"\n    \"tcp\": \n      \"preferred_ip_protocol\": \"ip4\"\n      \"query_response\": \n      - \"expect\": \"^SSH-2.0-\"\n  \"tcp_connect\": \n    \"prober\": \"tcp\"\n    \"tcp\": \n      \"preferred_ip_protocol\": \"ip4\""
 kind: ConfigMap
 metadata:
   labels:
